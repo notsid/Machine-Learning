@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 #Linear Regression with simple data fed as an array
 def plotline(x,y,x1,y1):
     plt.scatter(x,y,color='b',s=10)
-    plt.plot(x1,y1,color='g' ,linewidth=2)
+    plt.plot(x,y1,color='g' ,linewidth=2)
     plt.axis([0,80,0,200])
     plt.xlabel('Age (Years)')
     plt.ylabel('Weight (kg)')
@@ -42,7 +42,7 @@ def run():
   
     #Line plot
     x1=[25,71]
-    y1=[c0+m0*25,c0+m0*71]
+    y1=m0*x+c0
     plotline(x,y,x1,y1)
     
 if __name__ == "__main__":

@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 #Linear Regression with simple data fed as an array
 def plotline(x,y,x1,y1):
     plt.scatter(x,y,color='b',s=10)
-    plt.plot(x1,y1,color='g' ,linewidth=2)
+    plt.plot(x,y1,color='g' ,linewidth=2)
     plt.axis([-1,9,1,12])
     plt.xlabel('Age (Years)')
     plt.ylabel('Weight (kg)')
@@ -40,13 +40,13 @@ def run():
     
     #c0 is the coefficient in the equation of a straight line
     c0=my-(m0*mx)
-    
+    print(m0,c0)
     #yg is the equation of predicted line
     #yg=m0*x+c0
   
     #Line plot
     x1=[0,(len(x)-1)/2]
-    y1=[c0+m0*x[0],c0+m0*x[len(x)-1]]
+    y1=m0*x+c0
     plotline(x,y,x1,y1)
     
 if __name__ == "__main__":
