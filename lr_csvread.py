@@ -13,9 +13,9 @@ def plotline(x,y,x1,y1):
     plt.scatter(x,y,color='b',s=10)
     plt.plot(x,y1,color='g' ,linewidth=2)
     plt.axis([0,80,0,200])
-    plt.xlabel('Age (Years)')
-    plt.ylabel('Weight (kg)')
-    plt.title('Linear Regression(OLS)')
+    plt.xlabel('Temperature(Farenheit)')
+    plt.ylabel('Bikes Rented(Units)')
+    plt.title('Bike Rental(Linear Regresion)')
     plt.show()
     
 def run():
